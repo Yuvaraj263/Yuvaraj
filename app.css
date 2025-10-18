@@ -5,11 +5,10 @@
 body {
   background: linear-gradient(to right, #458acf, #e8f0fe);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  height: 100vh;           
-  display: flex;            /* Flexbox */
-  justify-content: center;  /* Horizontal center */
-  align-items: center;      /* Vertical center */
+  margin: 0;        
+  display: flex;           
+  justify-content: center;  
+  align-items: center;      
   color: #333;
 
 }
@@ -91,27 +90,45 @@ input:focus {
   box-shadow: 0 5px 15px rgba(255, 183, 77, 0.4);
 }
 
+
+
 /* User List */
 .user-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .user-item {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* push text left, buttons right */
   align-items: center;
   margin-bottom: 12px;
-  padding: 12px 15px;
+  padding: 12px 18px;
   border-radius: 12px;
   background: #e3f2fd;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
 }
 
+/* Keep hover effect */
 .user-item:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+} 
+/* Content area (name/info) */
+.user-info {
+  flex: 1;
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Button container aligned to right */
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /* Action buttons inside list */
@@ -119,6 +136,8 @@ input:focus {
   background: #29b6f6;
   color: white;
   margin-left: 8px;
+  min-width: 70px;
+  text-align: center;
 }
 
 .edit-btn:hover {
@@ -129,6 +148,8 @@ input:focus {
   background: #ef5350;
   color: white;
   margin-left: 8px;
+   min-width: 70px;
+  text-align: center;
 }
 
 .delete-btn:hover {
