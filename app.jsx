@@ -98,9 +98,11 @@ function App() {
       <ul className="user-list">
         {users.map((user) => (
           <li key={user._id} className="user-item">
-            {user.name} ({user.age}) - {user.address}
+            <div className="user-info">{user.name} ({user.age}) - {user.address}</div>
+            <div className="user-actions">
             <button className="edit-btn" onClick={() => startEdit(user)}>Edit</button>
             <button className="delete-btn" onClick={() => deleteUser(user._id)}>Delete</button>
+            </div>
           </li>
         ))}
       </ul>
