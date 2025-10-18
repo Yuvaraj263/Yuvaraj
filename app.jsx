@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import "./App.css";
+
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -59,9 +61,10 @@ function App() {
   };
 
   return (
-    <div style={{ maxWidth: "600px", margin: "auto", padding: "20px" }}>
+    <div className="container">
       <h1>React + Node + MongoDB CRUD</h1>
 
+    <div className="form">
       <input
         type="text"
         name="name"
@@ -85,18 +88,19 @@ function App() {
       />
 
       {editingId ? (
-        <button onClick={updateUser}>Update</button>
+        <button className="update-btn" onClick={updateUser}>Update</button>
       ) : (
-        <button onClick={createUser}>Create</button>
+        <button className="create-btn"  onClick={createUser}>Create</button>
       )}
+      </div>
 
       <h2>User List</h2>
-      <ul>
+      <ul className="user-list">
         {users.map((user) => (
-          <li key={user._id}>
+          <li key={user._id} className="user-item">
             {user.name} ({user.age}) - {user.address}
-            <button onClick={() => startEdit(user)}>Edit</button>
-            <button onClick={() => deleteUser(user._id)}>Delete</button>
+            <button className="edit-btn" onClick={() => startEdit(user)}>Edit</button>
+            <button className="delete-btn" onClick={() => deleteUser(user._id)}>Delete</button>
           </li>
         ))}
       </ul>
