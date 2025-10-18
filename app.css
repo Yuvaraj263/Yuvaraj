@@ -1,0 +1,136 @@
+/* App.css */
+/* App.css */
+
+/* Body & global */
+body {
+  background: linear-gradient(to right, #458acf, #e8f0fe);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  height: 100vh;           
+  display: flex;            /* Flexbox */
+  justify-content: center;  /* Horizontal center */
+  align-items: center;      /* Vertical center */
+  color: #333;
+
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  background: #49c4c9;
+  border-radius: 15px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+h1, h2 {
+  text-align: center;
+  font-weight: 600;
+  color: #0d47a1;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 15px;
+  margin-bottom: 25px;
+  background: #e3f2fd;
+  border-radius: 12px;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+}
+
+input {
+  padding: 10px 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #90caf9;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #0d47a1;
+  box-shadow: 0 0 5px rgba(13,71,161,0.3);
+  outline: none;
+}
+
+/* Buttons */
+.create-btn, .update-btn, .edit-btn, .delete-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Create & Update buttons */
+.create-btn {
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  color: white;
+}
+
+.create-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(129, 199, 132, 0.4);
+}
+
+.update-btn {
+  background: linear-gradient(135deg, #fb8c00, #ffb74d);
+  color: white;
+}
+
+.update-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 183, 77, 0.4);
+}
+
+/* User List */
+.user-list {
+  list-style: none;
+  padding: 0;
+}
+
+.user-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 12px 15px;
+  border-radius: 12px;
+  background: #e3f2fd;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.user-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Action buttons inside list */
+.edit-btn {
+  background: #29b6f6;
+  color: white;
+  margin-left: 8px;
+}
+
+.edit-btn:hover {
+  background: #0288d1;
+}
+
+.delete-btn {
+  background: #ef5350;
+  color: white;
+  margin-left: 8px;
+}
+
+.delete-btn:hover {
+  background: #c62828;
+}
